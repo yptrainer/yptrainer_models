@@ -1,15 +1,12 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainer_models/models/utils.dart';
+import 'package:yptrainerpro_models/helpers/utils.dart';
 
 part 'studio.g.dart';
 
 @JsonSerializable()
 class Studio {
-  final String? id;
+  final String id;
   final String? name;
-  final double? rate;
   final String? address;
   final int? size;
   final String? priceDescription;
@@ -30,14 +27,13 @@ class Studio {
   final String? vikeyToolKey;
 
   Studio({
-    this.id,
+    required this.id,
     this.minPrice,
     this.maxPrice,
     this.name,
     this.description,
     this.toolsDescription,
     this.serviceDescription,
-    this.rate,
     this.services,
     this.vikeyToolKey,
     this.vikeyLocalKey,

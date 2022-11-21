@@ -1,18 +1,18 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainer_models/models/utils.dart';
+import 'package:yptrainerpro_models/src/models/utils.dart';
 
 part 'studio_booking.g.dart';
 
 @JsonSerializable()
 class StudioBooking {
   /// The generated code assumes these values exist in JSON.
-  final String? id;
+  final String id;
   final String? userId;
   final String? trainerId;
   final String? userName;
-  final String? placeId;
+  final String placeId;
   final String? placeName;
   final String? serviceName;
   final int? serviceDuration;
@@ -20,10 +20,10 @@ class StudioBooking {
   final int? servicePrice;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
-  final DateTime? createdAt;
+  final DateTime createdAt;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
-  final DateTime? updatedAt;
+  final DateTime updatedAt;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
   final DateTime bookingStart;
@@ -36,7 +36,7 @@ class StudioBooking {
   final bool? cancelled;
 
   StudioBooking(
-      {this.id,
+      {required this.id,
       this.email,
       this.phoneNumber,
       /*  this.vikeyReservationCode, */
@@ -44,12 +44,12 @@ class StudioBooking {
       this.placeAddress,
       required this.bookingStart,
       required this.bookingEnd,
-      this.placeId,
+      required this.placeId,
       this.placeName,
       this.userId,
       this.trainerId,
-      this.createdAt,
-      this.updatedAt,
+      required this.createdAt,
+      required this.updatedAt,
       this.userName,
       this.serviceName,
       this.serviceDuration,

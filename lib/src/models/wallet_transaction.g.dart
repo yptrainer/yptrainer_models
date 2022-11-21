@@ -8,8 +8,11 @@ part of 'wallet_transaction.dart';
 
 WalletTransaction _$WalletTransactionFromJson(Map<String, dynamic> json) =>
     WalletTransaction(
-      createdAt: Utils.timeStampToDateTime(json['createdAt'] as Timestamp),
-      type: Utils.stringToTransactionType(json['type'] as String),
+      createdAt: json['createdAt'] == null
+          ? null
+          : DateTime.parse(json['createdAt'] as String),
+      id: json['id'] as String,
+      type: $enumDecode(_$TransactionTypeEnumMap, json['type']),
       buyerId: json['buyerId'] as String?,
       price: json['price'] as num?,
       coins: json['coins'] as num,
@@ -17,9 +20,16 @@ WalletTransaction _$WalletTransactionFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$WalletTransactionToJson(WalletTransaction instance) =>
     <String, dynamic>{
-      'createdAt': Utils.dateTimeToTimeStamp(instance.createdAt),
-      'type': Utils.transactionTypeToString(instance.type),
+      'id': instance.id,
+      'createdAt': instance.createdAt?.toIso8601String(),
+      'type': _$TransactionTypeEnumMap[instance.type]!,
       'buyerId': instance.buyerId,
       'price': instance.price,
       'coins': instance.coins,
     };
+
+const _$TransactionTypeEnumMap = {
+  TransactionType.purchase: 'purchase',
+  TransactionType.coinsRefund: 'coinsRefund',
+  TransactionType.booking: 'booking',
+};

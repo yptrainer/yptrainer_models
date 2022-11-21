@@ -1,6 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainer_models/models/utils.dart';
+import 'package:yptrainerpro_models/src/models/utils.dart';
 
 part 'wallet_transaction.g.dart';
 
@@ -8,6 +7,7 @@ enum TransactionType { purchase, coinsRefund, booking }
 
 @JsonSerializable()
 class WalletTransaction {
+  final String id;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
   final DateTime? createdAt;
@@ -21,6 +21,7 @@ class WalletTransaction {
 
   WalletTransaction({
     this.createdAt,
+    required this.id,
     required this.type,
     required this.buyerId,
     this.price,
