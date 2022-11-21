@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainerpro_models/helpers/utils.dart';
+import 'package:yptrainerpro_models/src/helpers/utils.dart';
 
 part 'studio.g.dart';
 

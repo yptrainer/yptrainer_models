@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainerpro_models/src/models/utils.dart';
+import 'package:yptrainerpro_models/src/helpers/utils.dart';
 
 part 'wallet_transaction.g.dart';
 
