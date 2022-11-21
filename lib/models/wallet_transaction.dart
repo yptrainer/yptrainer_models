@@ -4,7 +4,7 @@ import 'package:yptrainer_models/models/utils.dart';
 
 part 'wallet_transaction.g.dart';
 
-enum TransactionType { purchase, refund, booking }
+enum TransactionType { purchase, coinsRefund, booking }
 
 @JsonSerializable()
 class WalletTransaction {

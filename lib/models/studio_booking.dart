@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yptrainer_models/models/utils.dart';
+
 part 'studio_booking.g.dart';
 
 @JsonSerializable()
@@ -31,11 +32,13 @@ class StudioBooking {
   final String? email;
   final String? phoneNumber;
   final String? placeAddress;
+  final bool? cancelled;
 
   StudioBooking(
       {this.email,
       this.phoneNumber,
       /*  this.vikeyReservationCode, */
+      this.cancelled,
       this.placeAddress,
       required this.bookingStart,
       required this.bookingEnd,

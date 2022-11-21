@@ -11,6 +11,7 @@ StudioBooking _$StudioBookingFromJson(Map<String, dynamic> json) =>
       email: json['email'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       placeAddress: json['placeAddress'] as String?,
+      cancelled: json['cancelled'] as bool?,
       bookingStart:
           Utils.timeStampToDateTime(json['bookingStart'] as Timestamp),
       bookingEnd: Utils.timeStampToDateTime(json['bookingEnd'] as Timestamp),
@@ -33,6 +34,7 @@ Map<String, dynamic> _$StudioBookingToJson(StudioBooking instance) =>
       'userName': instance.userName,
       'placeId': instance.placeId,
       'placeName': instance.placeName,
+      'cancelled': instance.cancelled,
       'serviceName': instance.serviceName,
       'serviceDuration': instance.serviceDuration,
       'servicePrice': instance.servicePrice,
