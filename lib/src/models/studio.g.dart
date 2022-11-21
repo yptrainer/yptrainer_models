@@ -22,8 +22,7 @@ Studio _$StudioFromJson(Map<String, dynamic> json) => Studio(
       size: json['size'] as int?,
       tools: json['tools'] as List<dynamic>?,
       maxPeople: json['maxPeople'] as int?,
-      date:
-          json['date'] == null ? null : DateTime.parse(json['date'] as String),
+      date: Utils.timeStampToDateTime(json['date'] as Timestamp),
       disciplines: json['disciplines'] as List<dynamic>?,
     );
 
@@ -36,7 +35,7 @@ Map<String, dynamic> _$StudioToJson(Studio instance) => <String, dynamic>{
       'maxPeople': instance.maxPeople,
       'minPrice': instance.minPrice,
       'maxPrice': instance.maxPrice,
-      'date': instance.date?.toIso8601String(),
+      'date': Utils.dateTimeToTimeStamp(instance.date),
       'description': instance.description,
       'toolsDescription': instance.toolsDescription,
       'serviceDescription': instance.serviceDescription,
