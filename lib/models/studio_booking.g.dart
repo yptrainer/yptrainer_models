@@ -8,6 +8,7 @@ part of 'studio_booking.dart';
 
 StudioBooking _$StudioBookingFromJson(Map<String, dynamic> json) =>
     StudioBooking(
+      id: json['id'] as String?,
       email: json['email'] as String?,
       phoneNumber: json['phoneNumber'] as String?,
       placeAddress: json['placeAddress'] as String?,
@@ -29,6 +30,7 @@ StudioBooking _$StudioBookingFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$StudioBookingToJson(StudioBooking instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'userId': instance.userId,
       'trainerId': instance.trainerId,
       'userName': instance.userName,

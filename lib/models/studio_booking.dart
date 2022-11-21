@@ -8,6 +8,7 @@ part 'studio_booking.g.dart';
 @JsonSerializable()
 class StudioBooking {
   /// The generated code assumes these values exist in JSON.
+  final String? id;
   final String? userId;
   final String? trainerId;
   final String? userName;
@@ -35,7 +36,8 @@ class StudioBooking {
   final bool? cancelled;
 
   StudioBooking(
-      {this.email,
+      {this.id,
+      this.email,
       this.phoneNumber,
       /*  this.vikeyReservationCode, */
       this.cancelled,
