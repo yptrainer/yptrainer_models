@@ -19,9 +19,11 @@ class WalletTransaction {
   final String? buyerId;
   final num? price;
   final num coins;
+  final String fiscalCode;
 
   WalletTransaction({
     this.createdAt,
+    required this.fiscalCode,
     required this.id,
     required this.type,
     required this.buyerId,

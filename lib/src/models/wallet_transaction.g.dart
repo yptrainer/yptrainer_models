@@ -9,6 +9,7 @@ part of 'wallet_transaction.dart';
 WalletTransaction _$WalletTransactionFromJson(Map<String, dynamic> json) =>
     WalletTransaction(
       createdAt: Utils.timeStampToDateTime(json['createdAt'] as Timestamp),
+      fiscalCode: json['fiscalCode'] as String,
       id: json['id'] as String,
       type: Utils.stringToTransactionType(json['type'] as String),
       buyerId: json['buyerId'] as String?,
@@ -24,4 +25,5 @@ Map<String, dynamic> _$WalletTransactionToJson(WalletTransaction instance) =>
       'buyerId': instance.buyerId,
       'price': instance.price,
       'coins': instance.coins,
+      'fiscalCode': instance.fiscalCode,
     };
