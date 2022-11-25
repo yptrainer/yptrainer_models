@@ -17,9 +17,10 @@ class WalletTransaction {
       toJson: Utils.transactionTypeToString)
   final TransactionType type;
   final String? buyerId;
-  final num? price;
+  final num? priceSTRIPE;
   final num coins;
   final String? fiscalCode;
+  final String? paymentIntentIdSTRIPE;
 
   WalletTransaction({
     this.createdAt,
@@ -27,7 +28,8 @@ class WalletTransaction {
     required this.id,
     required this.type,
     required this.buyerId,
-    this.price,
+    this.paymentIntentIdSTRIPE,
+    this.priceSTRIPE,
     required this.coins,
   });
 

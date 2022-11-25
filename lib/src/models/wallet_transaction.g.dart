@@ -13,7 +13,8 @@ WalletTransaction _$WalletTransactionFromJson(Map<String, dynamic> json) =>
       id: json['id'] as String,
       type: Utils.stringToTransactionType(json['type'] as String),
       buyerId: json['buyerId'] as String?,
-      price: json['price'] as num?,
+      paymentIntentIdSTRIPE: json['paymentIntentIdSTRIPE'] as String?,
+      priceSTRIPE: json['priceSTRIPE'] as num?,
       coins: json['coins'] as num,
     );
 
@@ -23,7 +24,8 @@ Map<String, dynamic> _$WalletTransactionToJson(WalletTransaction instance) =>
       'createdAt': Utils.dateTimeToTimeStamp(instance.createdAt),
       'type': Utils.transactionTypeToString(instance.type),
       'buyerId': instance.buyerId,
-      'price': instance.price,
+      'priceSTRIPE': instance.priceSTRIPE,
       'coins': instance.coins,
       'fiscalCode': instance.fiscalCode,
+      'paymentIntentIdSTRIPE': instance.paymentIntentIdSTRIPE,
     };
