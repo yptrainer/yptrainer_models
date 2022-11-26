@@ -12,8 +12,7 @@ class Studio {
   final int? size;
   final String? priceDescription;
   final int? maxPeople;
-  final int? minPrice;
-  final int? maxPrice;
+  final int? price;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
   final DateTime? date;
@@ -29,8 +28,7 @@ class Studio {
 
   Studio({
     required this.id,
-    this.minPrice,
-    this.maxPrice,
+    this.price,
     this.name,
     this.description,
     this.toolsDescription,

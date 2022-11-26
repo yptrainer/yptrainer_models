@@ -8,8 +8,7 @@ part of 'studio.dart';
 
 Studio _$StudioFromJson(Map<String, dynamic> json) => Studio(
       id: json['id'] as String,
-      minPrice: json['minPrice'] as int?,
-      maxPrice: json['maxPrice'] as int?,
+      price: json['price'] as int?,
       name: json['name'] as String?,
       description: json['description'] as String?,
       toolsDescription: json['toolsDescription'] as String?,
@@ -33,8 +32,7 @@ Map<String, dynamic> _$StudioToJson(Studio instance) => <String, dynamic>{
       'size': instance.size,
       'priceDescription': instance.priceDescription,
       'maxPeople': instance.maxPeople,
-      'minPrice': instance.minPrice,
-      'maxPrice': instance.maxPrice,
+      'price': instance.price,
       'date': Utils.dateTimeToTimeStamp(instance.date),
       'description': instance.description,
       'toolsDescription': instance.toolsDescription,
