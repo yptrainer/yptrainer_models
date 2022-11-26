@@ -11,8 +11,8 @@ class Studio {
   final String? address;
   final int? size;
   final String? priceDescription;
-  final int? maxPeople;
-  final int? price;
+  final num? maxPeople;
+  final num? price;
   @JsonKey(
       fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
   final DateTime? date;
