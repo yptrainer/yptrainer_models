@@ -8,7 +8,6 @@ part of 'trainer.dart';
 
 Trainer _$TrainerFromJson(Map<String, dynamic> json) => Trainer(
       id: json['id'] as String?,
-      booking: json['booking'] as bool?,
       certifications: (json['certifications'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -40,7 +39,6 @@ Trainer _$TrainerFromJson(Map<String, dynamic> json) => Trainer(
 
 Map<String, dynamic> _$TrainerToJson(Trainer instance) => <String, dynamic>{
       'id': instance.id,
-      'booking': instance.booking,
       'certifications': instance.certifications,
       'city': instance.city,
       'description': instance.description,
