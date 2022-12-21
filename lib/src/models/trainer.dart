@@ -20,7 +20,7 @@ class Trainer with ChangeNotifier {
   num? minPrice;
   String? firstName;
   List<String>? goals;
-  String? startedYear;
+  num? startedYear;
   String? lastName;
   List<String>? trainingMode;
   bool? vat;

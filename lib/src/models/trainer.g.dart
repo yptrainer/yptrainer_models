@@ -27,7 +27,7 @@ Trainer _$TrainerFromJson(Map<String, dynamic> json) => Trainer(
       maxPrice: json['maxPrice'] as num?,
       minPrice: json['minPrice'] as num?,
       firstName: json['firstName'] as String?,
-      startedYear: json['startedYear'] as String?,
+      startedYear: json['startedYear'] as num?,
       lastName: json['lastName'] as String?,
       trainingMode: (json['trainingMode'] as List<dynamic>?)
           ?.map((e) => e as String)
