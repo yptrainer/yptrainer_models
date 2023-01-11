@@ -8,6 +8,6 @@ export 'src/models/studio_booking.dart';
 export 'src/models/trainer.dart';
 export 'src/models/wallet_transaction.dart';
 export 'src/models/chat/room.dart';
-export 'src/models/user.dart';
+export 'src/models/customer.dart';
 
 // TODO: Export any libraries intended for clients of this package.
