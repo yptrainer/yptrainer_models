@@ -7,7 +7,7 @@ part of 'trainer.dart';
 // **************************************************************************
 
 Trainer _$TrainerFromJson(Map<String, dynamic> json) => Trainer(
-      id: json['id'] as String?,
+      id: json['id'] as String,
       onboarding: json['onboarding'] as bool?,
       certifications: (json['certifications'] as List<dynamic>?)
           ?.map((e) => e as String)

@@ -6,7 +6,7 @@ part 'trainer.g.dart';
 @JsonSerializable()
 class Trainer with ChangeNotifier {
   bool? onboarding;
-  String? id;
+  String id;
   List<String>? certifications;
   String? city;
   String? description;
@@ -27,7 +27,7 @@ class Trainer with ChangeNotifier {
   List<String>? ypStudios;
 
   Trainer(
-      {this.id,
+      {required this.id,
       this.onboarding,
       this.certifications,
       this.city,
