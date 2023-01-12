@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:yptrainer_models/src/helpers/utils.dart';
+import 'package:yptrainer_utils/src/helpers/utils.dart';
 
 part 'studio_booking.g.dart';
 

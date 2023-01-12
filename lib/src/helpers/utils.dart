@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:enum_to_string/enum_to_string.dart';
-import 'package:yptrainer_models/yptrainerpro_models.dart';
+import 'package:yptrainer_utils/src/models/wallet_transaction.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class Utils {

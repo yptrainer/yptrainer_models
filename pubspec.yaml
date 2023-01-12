@@ -1,4 +1,4 @@
-name: yptrainer_models
+name: yptrainer_utils
 description: A starting point for Dart libraries or applications.
 version: 1.0.4
 environment:
