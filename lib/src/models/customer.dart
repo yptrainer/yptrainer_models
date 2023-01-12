@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:yptrainer_models/src/helpers/utils.dart';
 
 part 'customer.g.dart';
 
@@ -8,8 +9,16 @@ class Customer {
   String? firstName;
   String? lastName;
   String id;
+  @JsonKey(
+      fromJson: Utils.timeStampToDateTime, toJson: Utils.dateTimeToTimeStamp)
+  final DateTime? createdAt;
 
-  Customer({this.email, this.firstName, this.lastName, required this.id});
+  Customer(
+      {this.email,
+      this.firstName,
+      this.lastName,
+      this.createdAt,
+      required this.id});
 
   factory Customer.fromJson(Map<String, dynamic> json) =>
       _$CustomerFromJson(json);
