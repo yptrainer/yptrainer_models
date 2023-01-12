@@ -7,6 +7,7 @@ environment:
 dependencies:
   cloud_firestore: ^4.1.0
   enum_to_string: ^2.0.1
+  copy_with_extension: ^5.0.0
   flutter:
     sdk: flutter
   json_annotation: ^4.7.0
@@ -14,4 +15,5 @@ dependencies:
 dev_dependencies:
   json_serializable: ^6.5.4
   build_runner: ^2.3.2
+  copy_with_extension_gen: ^5.0.0
   lints: ^2.0.0

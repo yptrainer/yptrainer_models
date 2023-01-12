@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:copy_with_extension/copy_with_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yptrainer_utils/src/helpers/utils.dart';
 
 part 'customer.g.dart';
 
 @JsonSerializable()
+@CopyWith()
 class Customer {
   String? email;
   String? firstName;
